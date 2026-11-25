@@ -418,7 +418,7 @@ var tabs=[['inicio','Inicio','home'],['mapa','Mapa','map'],['hitos','Hitos','pin
 nav.innerHTML='<div class="in">'+tabs.map(function(t){return '<a href="#'+t[0]+'" data-t="'+t[0]+'">'+ic(t[2])+t[1]+'</a>'}).join('')+'</div>';
 
 function player(file,doneN){
- return '<div class="aud" data-src="audios/'+file+'.mp3"'+(doneN?' data-done="'+doneN+'"':'')+'><audio preload="metadata" controls playsinline hidden></audio><div class="seek" hidden><button data-s="-10">Retroceder 10 s</button><button data-s="10">Avanzar 10 s</button></div><p class="noaud" hidden>Audio próximamente disponible</p></div>';
+ return '<div class="aud" data-src="audios/'+file+'.mp4"'+(doneN?' data-done="'+doneN+'"':'')+'><audio preload="metadata" controls playsinline hidden></audio><div class="seek" hidden><button data-s="-10">Retroceder 10 s</button><button data-s="10">Avanzar 10 s</button></div><p class="noaud" hidden>Audio próximamente disponible</p></div>';
 }
 function trans(a){return '<details><summary>Transcripción del audio</summary>'+a.map(function(p){return '<p>'+p+'</p>'}).join('')+'</details>'}
 function wireAudio(){
