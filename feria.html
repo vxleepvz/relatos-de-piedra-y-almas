@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2a0a14">
+<title>Relatos de piedra y almas · Un recorrido por el Cementerio General</title>
+<meta name="description" content="Recorrido patrimonial autoguiado de 11 hitos por el Cementerio General de Santiago: mapa interactivo y relatos en audio entre la historia y el mito.">
+<meta property="og:title" content="Relatos de piedra y almas: entre la Historia y el Mito en el Cementerio General">
+<meta property="og:description" content="Once hitos, un mapa en tu celular y relatos en audio. Ven a descubrirlo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bur:#3b0f1c;--bur2:#2a0a14;--neg:#0d0809;--bei:#eadfc8;--oro:#c9ab6e;--sua:#b8a98c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--neg);color:var(--bei);font:17px/1.65 Mulish,system-ui,sans-serif}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:1.08;margin:0}
+p{margin:0 0 1rem}
+.wrap{max-width:760px;margin:0 auto;padding:0 1.25rem}
+.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:.9rem}
+.orn{display:flex;align-items:center;gap:.8rem;color:var(--oro);margin:1.2rem 0}
+.orn:before,.orn:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,171,110,.6))}
+.orn:after{transform:scaleX(-1)}
+.orn i{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--oro)}
+/* portada */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:radial-gradient(120% 80% at 50% 0,#5a1a2c 0,var(--bur2) 45%,var(--neg) 100%)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--neg) 4%,rgba(42,10,20,.35) 55%,rgba(13,8,9,.65)),rgba(70,14,32,.38)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:3.2rem;padding-top:2rem}
+h1{font-size:clamp(2.9rem,12vw,5.6rem);text-shadow:0 2px 24px rgba(0,0,0,.6)}
+h1 small{display:block;margin-top:.7rem;font:italic 600 clamp(1.25rem,4.6vw,1.9rem)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--oro)}
+.hook{font-size:1.15rem;max-width:30ch;margin:1.4rem 0 1.6rem;color:var(--bei)}
+.cue{display:inline-block;color:var(--oro);text-decoration:none;font-weight:700;letter-spacing:.14em;font-size:.8rem;text-transform:uppercase;border-bottom:1px solid var(--oro);padding-bottom:.2rem}
+/* secciones */
+section{padding:4.2rem 0}
+.alt{background:linear-gradient(180deg,var(--bur2),var(--bur) 55%,var(--bur2))}
+h2{font-size:clamp(2.1rem,7vw,3rem);margin-bottom:1.1rem}
+.lead{font-size:1.12rem}
+.photo{margin:1.6rem 0 0;border:1px solid rgba(201,171,110,.45);padding:6px;background:rgba(0,0,0,.25)}
+.photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.grid{display:grid;gap:.9rem;margin-top:1.6rem}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+.card{border:1px solid rgba(201,171,110,.4);background:rgba(13,8,9,.35);padding:1.2rem 1.2rem 1.1rem}
+.card h3{font-size:1.6rem;color:var(--oro);margin:.5rem 0 .3rem}
+.card p{margin:0;font-size:.98rem;color:var(--bei)}
+.card svg{width:34px;height:34px;stroke:var(--oro);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.big{font:700 2.6rem/1 'Cormorant Garamond',Georgia,serif;color:var(--oro)}
+/* adelanto */
+.player{margin-top:1.4rem;border:1px solid var(--oro);background:rgba(0,0,0,.4);padding:1.1rem}
+.player audio{width:100%}
+.soft{color:var(--sua);font-style:italic;font-size:.95rem;margin:0;text-align:center}
+[hidden]{display:none!important}
+/* pasos */
+ol{list-style:none;margin:1.6rem 0 0;padding:0;counter-reset:s}
+li.step{counter-increment:s;position:relative;padding:0 0 1.5rem 3.6rem;border-left:0}
+li.step:before{content:counter(s);position:absolute;left:0;top:-.15rem;width:2.6rem;height:2.6rem;border:1px solid var(--oro);border-radius:50%;display:grid;place-items:center;font:700 1.4rem 'Cormorant Garamond',Georgia,serif;color:var(--oro);background:var(--bur2)}
+li.step:not(:last-child):after{content:"";position:absolute;left:1.3rem;top:2.6rem;bottom:.2rem;width:1px;background:rgba(201,171,110,.35)}
+li.step b{display:block;font:700 1.35rem 'Cormorant Garamond',Georgia,serif;color:var(--bei)}
+.note{margin-top:1rem;padding:.9rem 1rem;border-left:3px solid var(--oro);background:rgba(0,0,0,.3);font-size:.97rem}
+/* cierre */
+.end{text-align:center;padding:5rem 0 3rem;background:radial-gradient(90% 60% at 50% 0,#4a1424 0,var(--neg) 75%)}
+.end h2{font-size:clamp(2.3rem,9vw,3.6rem)}
+.end .quote{font:italic 600 1.45rem/1.3 'Cormorant Garamond',Georgia,serif;color:var(--oro);margin:1.2rem auto 1.8rem;max-width:22ch}
+footer{padding:1.6rem 1.25rem calc(1.6rem + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;color:var(--sua);border-top:1px solid rgba(201,171,110,.25)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+a:focus-visible,audio:focus-visible{outline:3px solid var(--oro);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <img src="feria/portada.jpg" alt="Fotografía patrimonial del Cementerio General de Santiago" onerror="this.remove()">
+  <div class="wrap">
+    <p class="eyebrow">Recorrido patrimonial autoguiado</p>
+    <h1>Relatos de piedra y almas<small>Entre la Historia y el Mito en el Cementerio General</small></h1>
+    <p class="hook">¿Cuánto de lo que se cuenta entre estas piedras es historia, y cuánto es mito?</p>
+    <a class="cue" href="#presentacion">Descúbrelo ↓</a>
+  </div>
+</header>
+
+<section id="presentacion">
+  <div class="wrap rv">
+    <p class="eyebrow">La experiencia</p>
+    <h2>Un lugar que guarda más de lo que parece</h2>
+    <p class="lead">El Cementerio General de Santiago fue fundado en 1821 y es mucho más que un lugar de descanso: es historia, arquitectura, literatura y memoria de Chile.</p>
+    <p>Con tu celular y unos audífonos, te invitamos a recorrerlo de una forma distinta, escuchando relatos que mezclan lo que sabemos con lo que se cuenta.</p>
+    <figure class="photo" id="f2" hidden><img src="feria/detalle.jpg" alt="Detalle patrimonial del Cementerio General" loading="lazy" onerror="document.getElementById('f2').remove()" onload="document.getElementById('f2').hidden=false"></figure>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap rv">
+    <p class="eyebrow">¿Qué vivirás?</p>
+    <h2>Once hitos para descubrir</h2>
+    <div class="orn"><i></i></div>
+    <div class="grid">
+      <div class="card"><div class="big">11</div><h3>Hitos</h3><p>Un recorrido con estaciones que te sorprenderán a cada paso.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3 3 5v16l6-2 6 2 6-2V3l-6 2-6-2z"/><path d="M9 3v16"/><path d="M15 5v16"/></svg><h3>Mapa interactivo</h3><p>Oriéntate desde tu celular y sigue la ruta sin necesidad de guía.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg><h3>Relatos en audio</h3><p>Historias, personajes y leyendas que cobran vida en cada lugar.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M16 8l-2 6-6 2 2-6z"/></svg><h3>A tu propio ritmo</h3><p>Empieza cuando quieras, detente donde quieras y explora a tu manera.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="adelanto">
+  <div class="wrap rv">
+    <p class="eyebrow">Escucha un adelanto</p>
+    <h2>Ponte en ambiente</h2>
+    <p>Un fragmento breve para que imagines lo que viene. Los relatos completos te esperan en el recorrido.</p>
+    <div class="player">
+      <audio id="aud" controls preload="none" playsinline hidden></audio>
+      <p class="soft" id="msg" hidden>El adelanto en audio estará disponible muy pronto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap rv">
+    <p class="eyebrow">Cómo se vive</p>
+    <h2>Cuatro pasos para comenzar</h2>
+    <ol>
+      <li class="step"><b>Llega al Cementerio General</b>El recorrido comienza en la Puerta de acceso La Paz, en Av. Profesor Alberto Zañartu con Av. La Paz.</li>
+      <li class="step"><b>Accede desde tu celular</b>Entra al recorrido escaneando el código QR del proyecto. No necesitas instalar nada.</li>
+      <li class="step"><b>Ponte los audífonos</b>Así escucharás cada relato sin perder el ambiente que te rodea.</li>
+      <li class="step"><b>Sigue los hitos</b>Guíate con el mapa, camina a tu ritmo y deja que cada lugar te cuente su historia.</li>
+    </ol>
+    <p class="note">Es un lugar de memoria y descanso: camina con calma, en silencio y con respeto por las familias y las sepulturas.</p>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap rv">
+    <div class="orn"><i></i></div>
+    <h2>Las piedras tienen algo que contarte</h2>
+    <p class="quote">Ven a escucharlo donde ocurrió.</p>
+    <p>Te esperamos en el Cementerio General para recorrer, escuchar y descubrir.</p>
+  </div>
+</section>
+
+<footer>Proyecto de segundo año · Administración en Turismo y Hospitalidad · Duoc UC</footer>
+
+<script>
+(function(){
+ var a=document.getElementById('aud'),m=document.getElementById('msg'),src='feria/adelanto.mp3';
+ function ok(){a.src=src;a.hidden=false;m.hidden=true}
+ function no(){a.hidden=true;m.hidden=false}
+ a.addEventListener('error',no);
+ try{fetch(src,{method:'HEAD'}).then(function(r){r.ok?ok():no()}).catch(no)}catch(e){no()}
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+ else els.forEach(function(e){e.classList.add('on')});
+})();
+</script>
+</body>
+</html>
